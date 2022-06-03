@@ -33,7 +33,7 @@ const top20 = [
     id: 6,
     title: "KBS한국어능력시험",
     licenseOrgan: "KBS 한국어진흥원",
-    esRegdt: "2021-06-19T00:00:00.000+00:00",
+    esRegdt: "2022-06-19T00:00:00.000+00:00",
   },
   {
     id: 7,
