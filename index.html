@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      /* 공통 */
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .container {
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+      }
+      .ir_so {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+      }
+
+      /* header */
+      #header {
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #dfdfdf;
+      }
+      #header .top {
+        padding-top: 18px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #header .top .left {
+        display: flex;
+      }
+      #header .logo {
+        margin: 0 30px 3px 0;
+      }
+      #header .logo a {
+        padding: 0 8px;
+      }
+      #header .logo a img {
+        width: 115px;
+        height: 34px;
+      }
+      #header .surch__from {
+        position: relative;
+      }
+      #header .surch__from .text {
+        position: absolute;
+        line-height: 40px;
+        padding-left: 30px;
+        font-size: 0.8em;
+      }
+      #header .surch__from img {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+      }
+      #header .surch .surch__from input {
+        border: 0;
+        line-height: 40px;
+        width: 400px;
+        height: 40px;
+        border: 2px solid #9babff;
+        border-radius: 20px;
+        padding-left: 100px;
+        padding-top: 2px;
+      }
+      #header .menber {
+        display: flex;
+      }
+      #header .menber > div {
+        margin: 0 14px;
+      }
+      #header .menber a {
+        font-size: 0.8rem;
+        color: #919191;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      #header .menber a img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: 5px;
+        height: 22px;
+      }
+      #header .bottom {
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #header .bottom .left {
+        display: flex;
+        align-items: center;
+      }
+      #header .ham {
+        padding-top: 9px;
+        border: 0;
+        background: transparent;
+      }
+      #header .ham img {
+        width: 55px;
+        height: 55px;
+        margin-left: -2px;
+      }
+      #header .nav ul {
+        margin-left: 24px;
+      }
+      #header .nav li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 22px;
+      }
+      #header .nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+      }
+      #header .ather {
+        display: flex;
+        align-items: center;
+      }
+      #header .ather li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 22px;
+      }
+      #header .ather a {
+        text-decoration: none;
+      }
+
+      /* section01 */
+      #section01 {
+        background: #ede7fb;
+      }
+      .section01__wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 54px 0;
+      }
+      .section01__wrap .left {
+        width: 420px;
+        height: 370px;
+        background: #fff;
+      }
+      .section01__wrap .center {
+        width: 550px;
+        background: #fff;
+        padding-top: 40px;
+        position: relative;
+      }
+      .section01__wrap .center .title {
+        font-size: 1rem;
+        margin-left: 44px;
+        font-weight: 600;
+        margin-bottom: 26px;
+      }
+      .section01__wrap .center .btn {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        display: flex;
+      }
+      .section01__wrap .center .btn > div {
+        border: 1px solid #dfdfdf;
+        width: 19px;
+        height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8e8df6;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .section01__wrap .center .desc {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+        width: 420px;
+        height: 165px;
+        margin: 0 auto;
+      }
+      .section01__wrap .center .desc .box {
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+        height: 80px;
+      }
+      .section01__wrap .center .desc .box img {
+        margin-right: 20px;
+        width: 72px;
+        height: 58px;
+        display: block;
+      }
+      .section01__wrap .center .desc .box strong {
+        margin-bottom: 5px;
+        display: block;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+      .section01__wrap .center .desc .box p {
+        font-size: 0.7rem;
+        word-break: keep-all;
+      }
+      .section01__wrap .bottom {
+        margin-top: 38px;
+        display: flex;
+        justify-content: center;
+      }
+      .section01__wrap .right {
+        width: 260px;
+        background: #fff;
+        padding-top: 40px;
+        position: relative;
+      }
+      .section01__wrap .right .title {
+        font-size: 1rem;
+        margin-left: 44px;
+        font-weight: 600;
+        margin-bottom: 26px;
+      }
+      .section01__wrap .right .btn {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        display: flex;
+      }
+      .section01__wrap .right .btn > div {
+        border: 1px solid #dfdfdf;
+        width: 19px;
+        height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8e8df6;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .section01__wrap .right .list {
+        margin-left: 56px;
+        counter-reset: item;
+        list-style-type: none;
+      }
+      .section01__wrap .right .list li {
+        padding: 4px 0;
+        position: relative;
+        font-size: 0.8rem;
+        font-weight: 100;
+      }
+      .section01__wrap .right .list li::before {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        content: counter(item) "";
+        counter-increment: item;
+        color: #bababa;
+        font-size: 0.8rem;
+        font-weight: bold;
+        width: 18px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 4px;
+      }
+      .section01__wrap .right .list li:hover {
+        text-decoration: underline;
+      }
+
+      /* section02 */
+      #section02 {
+        padding-bottom: 100px;
+      }
+      #section02 .ad__wrap {
+        padding: 32px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #section02 .top20__wrap {
+      }
+      #section02 .top20__wrap .title {
+        display: flex;
+        align-items: end;
+      }
+      #section02 .top20__wrap .title .text {
+        margin-left: 8px;
+        font-size: 1.8rem;
+        font-weight: 100;
+      }
+      #section02 .top20__wrap .title .text .color {
+        color: #854ce6;
+      }
+      #section02 .top20__wrap .lists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-top: 20px;
+        gap: 20px 1%;
+      }
+      #section02 .top20__wrap .list {
+        width: 24%;
+        height: 190px;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      #section02 .top20__wrap .list .top {
+        position: relative;
+      }
+      #section02 .top20__wrap .list .top,
+      #section02 .top20__wrap .list .top img {
+        height: 123px;
+      }
+      #section02 .top20__wrap .list .top .gd {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        opacity: 0.7;
+        background: -webkit-linear-gradient(
+          to bottom,
+          transparent,
+          #2c3e50
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          #2c3e50
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      #section02 .top20__wrap .list .top .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+      }
+      #section02 .top20__wrap .list:nth-child(1) .top .bg {
+        background: #e9b107;
+      }
+      #section02 .top20__wrap .list:nth-child(2) .top .bg {
+        background: #4b3962;
+      }
+      #section02 .top20__wrap .list:nth-child(3) .top .bg {
+        background: #e16045;
+      }
+      #section02 .top20__wrap .list:nth-child(4) .top .bg {
+        background: #474756;
+      }
+      #section02 .top20__wrap .list:nth-child(5) .top .bg {
+        background: #305a7e;
+      }
+      #section02 .top20__wrap .list:nth-child(6) .top .bg {
+        background: #b13c2f;
+      }
+      #section02 .top20__wrap .list:nth-child(7) .top .bg {
+        background: #383f4e;
+      }
+      #section02 .top20__wrap .list:nth-child(8) .top .bg {
+        background: #cd9308;
+      }
+      #section02 .top20__wrap .list .top .dday {
+        position: absolute;
+        top: 16px;
+        right: 30px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        font-size: 0.8rem;
+        width: 44px;
+        line-height: 1.6;
+        background: #9c57f5;
+        border-radius: 10px;
+      }
+      #section02 .top20__wrap .list .top .title {
+        position: absolute;
+        bottom: 16px;
+        left: 30px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      #section02 .top20__wrap .list .bottom {
+        height: 67px;
+        padding-top: 15px;
+        padding-left: 28px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+      }
+      #section02 .top20__wrap .list .bottom .organ {
+        font-size: 0.86rem;
+        margin-bottom: 3px;
+        color: #6e6e6e;
+      }
+      #section02 .top20__wrap .list .bottom .day {
+        font-size: 0.72rem;
+        color: #df635f;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="top">
+          <div class="left">
+            <div class="logo">
+              <a href="/">
+                <h1 class="ir_so">자격증넷</h1>
+                <img
+                  src="https://www.janet.co.kr/html_demo/img/common/logo.png"
+                  alt="자격증넷"
+                />
+              </a>
+            </div>
+            <div class="surch">
+              <form class="surch__from">
+                <div class="text">통합검색</div>
+                <button>
+                  <img
+                    src="https://www.janet.co.kr/html_demo/img/common/mainSrchBtn.png"
+                    alt="검색"
+                  />
+                </button>
+                <input
+                  type="text"
+                  placeholder="자격증 꿀팁 보러가기 #취준 #취뽀"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="menber">
+            <div class="join">
+              <a href="/">
+                <img
+                  src="https://www.janet.co.kr/img/common/header/member.png"
+                  alt="회원가입"
+                />
+                <div>회원가입</div>
+              </a>
+            </div>
+            <div class="login">
+              <a href="/">
+                <img
+                  src="https://www.janet.co.kr/img/common/header/login.png"
+                  alt="로그인"
+                />
+                <div>로그인</div>
+              </a>
+            </div>
+            <div class="company">
+              <a href="/">
+                <img
+                  src="https://www.janet.co.kr/img/common/header/company.png"
+                  alt="기업서비스"
+                />
+                <div>기업서비스</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <button class="ham">
+              <img
+                src="	https://www.janet.co.kr/img/common/header/gnb.png"
+                alt="메뉴"
+              />
+            </button>
+            <nav class="nav">
+              <h2 class="ir_so">메뉴</h2>
+              <ul>
+                <li>
+                  <a href="/">Top100</a>
+                </li>
+                <li>
+                  <a href="/">자격증정보</a>
+                </li>
+                <li>
+                  <a href="/">어학/공무원</a>
+                </li>
+                <li>
+                  <a href="/">자넷info</a>
+                </li>
+                <li>
+                  <a href="/">자넷톡</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="ather">
+            <ul>
+              <li>
+                <a href="/">
+                  <div class="ir_so">우리동네학원</div>
+                  <img
+                    src="https://www.janet.co.kr/img/common/header/aca.png"
+                    alt="우리동네학원"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <div class="ir_so">커뮤니티</div>
+                  <img
+                    src="https://www.janet.co.kr/img/common/header/commu.png"
+                    alt="커뮤니티"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <div class="ir_so">자격증AI</div>
+                  <img
+                    src="https://www.janet.co.kr/img/common/header/ai.png"
+                    alt="자격증AI"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+    <main id="main">
+      <h2 class="ir_so">메인</h2>
+      <section id="section01">
+        <h3 class="ir_so">베너</h3>
+        <div class="container">
+          <div class="section01__wrap">
+            <article class="left">
+              <h4 class="ir_so">광고</h4>
+              <a href="/">
+                <img
+                  src="https://www.janet.co.kr/img/common/main/banner/mainBn_top_01.png"
+                  alt=""
+                />
+              </a>
+            </article>
+            <article class="center">
+              <h4 class="title">자격증정보</h4>
+              <div class="btn">
+                <div class="material-icons">chevron_left</div>
+                <div class="material-icons">navigate_next</div>
+              </div>
+              <div class="desc">
+                <div>
+                  <a href="/" class="box">
+                    <img
+                      src="https://www.janet.co.kr/html_demo/img/main/inCrfc.png"
+                      alt="자격증정보"
+                    />
+                    <div>
+                      <strong>자격증정보</strong>
+                      <p>자격증정보의 모든 것</p>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a href="/" class="box">
+                    <img
+                      src="https://www.janet.co.kr/html_demo/img/main/iCrtfc.png"
+                      alt="계열별정보"
+                    />
+                    <div>
+                      <strong>계열별정보</strong>
+                      <p>자격증에 대하여 알려드립니다.</p>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a href="/" class="box">
+                    <img
+                      src="https://www.janet.co.kr/html_demo/img/main/sCrtfc.png"
+                      alt="자격증 공모전"
+                    />
+                    <div>
+                      <strong>자격증 공모전</strong>
+                      <p>자격증 관련 공모전 정보 확인하기</p>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a href="/" class="box">
+                    <img
+                      src="https://www.janet.co.kr/html_demo/img/main/rCrtfc.png"
+                      alt="시험접수안내"
+                    />
+                    <div>
+                      <strong>시험접수안내</strong>
+                      <p>필기/실기 기본접수안내</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="/">
+                  <img
+                    src="https://www.janet.co.kr/data/ebslider/eb4_basic/img/d0942d969f0a37cb73a46db345ea874b.png"
+                    alt="광고"
+                  />
+                </a>
+              </div>
+            </article>
+            <article class="right">
+              <h4 class="title">기사인기순위</h4>
+              <div class="btn">
+                <div class="material-icons">chevron_left</div>
+                <div class="material-icons">navigate_next</div>
+              </div>
+              <ol class="list">
+                <li><a href="/">전기기사</a></li>
+                <li><a href="/">산업안전기사</a></li>
+                <li><a href="/">위험물산업기사</a></li>
+                <li><a href="/">전기산업기사</a></li>
+                <li><a href="/">건축기사</a></li>
+                <li><a href="/">건설안전기사</a></li>
+                <li><a href="/">소방서비기사(전기분야)</a></li>
+                <li><a href="/">제품디자인산업기사</a></li>
+                <li><a href="/">건설기계정비산업기사</a></li>
+                <li><a href="/">사형금형산업기사</a></li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- //section01 -->
+      <section id="section02">
+        <h3 class="ir_so">항목</h3>
+        <article class="ad">
+          <h4 class="ir_so">광고</h4>
+          <div class="container">
+            <div class="ad__wrap">
+              <div class="material-icons">arrow_back_ios</div>
+              <img
+                src="https://www.janet.co.kr/html_demo/img/main/MainBn_scroll_01.png"
+                alt=""
+              />
+              <img
+                src="https://www.janet.co.kr/html_demo/img/main/MainBn_scroll_02.png"
+                alt=""
+              />
+              <img
+                src="https://www.janet.co.kr/html_demo/img/main/MainBn_scroll_03.png"
+                alt=""
+              />
+              <div class="material-icons">arrow_forward_ios</div>
+            </div>
+          </div>
+        </article>
+        <article class="top20">
+          <div class="container">
+            <div class="top20__wrap">
+              <h4 class="title">
+                <img
+                  src="https://www.janet.co.kr/img/common/main/m_main/hot_keyword.png"
+                  alt=""
+                />
+                <span class="text">
+                  <strong><span class="color">HOT</span>키워드</strong>TOP20
+                </span>
+              </h4>
+              <div class="lists">
+                <!-- javascript -->
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- //section02 -->
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script src="./assets/js/top20.js"></script>
+    <script>
+      const lists = document.querySelector(".lists");
+      const html = [];
+      let today = new Date();
+
+      top20.forEach((list) => {
+        let tday = list.esRegdt;
+        let isTday = tday.slice(0, 10);
+        let dday = new Date(isTday).getTime();
+        let isDday = Math.floor((dday - today) / (1000 * 60 * 60 * 24));
+
+        html.push(
+          `
+            <a href="/" class="list">
+                <div class="top">
+                    <img
+                    src="./assets/imgs/img${list.id}.png"
+                    alt=""
+                    />
+                    <div class="bg"></div>
+                    <div class="gd"></div>
+                    <div class="title">${list.title}</div>
+                    <div class="dday">D-` +
+            isDday +
+            `</div>
+                </div>
+                <div class="bottom">
+                    <span class="organ">시행기관: ${list.licenseOrgan}</span>
+                    <span class="day">시험일: ` +
+            isTday +
+            `</span>
+                </div>
+            </a>
+          `
+        );
+      });
+      lists.innerHTML = html.join("");
+    </script>
+  </body>
+</html>
